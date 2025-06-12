@@ -66,7 +66,7 @@ async function run() {
               quantity: updatedCoffee.quantity,
               supplier: updatedCoffee.supplier,
               taste: updatedCoffee.taste,
-              category: updatedCoffee.category,
+              price: updatedCoffee.price,
               details: updatedCoffee.details,
               photo: updatedCoffee.photo
             }
@@ -80,7 +80,6 @@ async function run() {
             // }
 
             const result = await coffeeCollection.updateOne(filter, coffee, options);
-
             res.send(result);
         })
 
