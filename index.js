@@ -94,7 +94,8 @@ async function run() {
 
     // users related api
     app.get('/users', async (req, res) => {
-      const result = await usersCollection.find().toArray();
+      const cursor = userCollection.find();
+      const result = await cursor.toArray();
       res.send(result);
     })
 
